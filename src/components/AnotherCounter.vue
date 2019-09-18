@@ -7,6 +7,7 @@
     <div class="col-sm-6">
       <button class="btn btn-primary" @click = "decrease(10)">--</button>
     </div>
+
   </div>
 </div>
 
@@ -26,7 +27,11 @@ export default {
     ...mapMutations([
       'increase',
       'decrease'
+
+
     ])
+
+
     // increase(by){
     //   this.$store.dispatch("increase",by);
     // }

@@ -7,6 +7,9 @@
     <hr>
     <click-btn></click-btn>
     <another-counter></another-counter>
+    <input type="text" name="val" id="val" @input = "updateValue" :value = "get">
+    <p>{{get}}//value//
+    </p>
   </div>
 </template>
 
@@ -21,7 +24,25 @@ export default {
     showRes:Res,
     anotherResult:AnotherResult,
     anotherCounter:AnotherCounter
-  }
+  },
+  methods:{
+     updateValue(event){
+      this.$store.dispatch('updateValue',event.target.value)
+    }
+  },
+  computed:{
+    //  value(){
+    //   return this.$store.getters.value
+
+    //   }
+    get (){
+     return this.$store.getters.value
+    },
+    set(value){
+      this.$store.dispatch('updateValue',value)
+    }
+    }
+
 
 }
 </script>
