@@ -9,7 +9,7 @@
 export default {
   computed:{
     counter(){
-    return this.$store.state.doubleCounter
+    return this.$store.state.counter
 
   }
 }
